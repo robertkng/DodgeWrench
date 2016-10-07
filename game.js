@@ -1,38 +1,35 @@
 $(document).ready(function(){
-
 var $container = $('.container');
-// var $containerY = ;
-// var $containerX = ;
+var $containerX = $('.container').css('width');
+var $containerY = $('.container').css('height');
+
 var $wrench = $('.wrench');
-var $wrenchY = $('.wrench').css('top');
 var $wrenchX = $('.wrench').css('left');
-var $speedX = $wrenchX += 5;
+var $wrenchY = $('.wrench').css('top');
+var $moveX = 10;
+var $moveY = 10;
 
-function movingWrenchX(){
+var $positionX = $wrenchX;
+var $positionY = $wrenchY;
+
+function movingWrenchXY(){
   var $wrench = $('.wrench');
-  var $wrenchX = parseInt($('.wrench').css('left'));
+  var $wrenchX = parseInt($wrench.css('left'));
+  var $wrenchY = parseInt($wrench.css('top'));
+
   setInterval(function(){
-    $wrench.css('left', $wrenchX + 'px');
     if ($wrenchX > 0){
-      $wrenchX += 10;
-    }
-  }, 100);
-};
-
-function movingWrenchY(){
-  var $wrench = $('.wrench');
-  var $wrenchY = parseInt($('.wrench').css('top'));
-  setInterval(function(){
-    $wrench.css('top', $wrenchY + 'px');
+      $wrenchX = $wrenchX + $moveX;
     if ($wrenchY > 0){
-      $wrenchY += 10;
-    }
+      $wrenchY = $wrenchY + $moveY;
+      $wrench.css('left', $wrenchX + 'px');
+      $wrench.css('top', $wrenchY + 'px');
+      console.log($wrenchX, $wrenchY);
+    }}
   }, 100);
 };
 
+// consolelog bounceWrenchY();
 
-
-console.log($wrenchY, $wrenchY);
-movingWrenchX();
-movingWrenchY();
+movingWrenchXY();
 })
