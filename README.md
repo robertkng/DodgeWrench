@@ -9,7 +9,7 @@ https://github.com/teachmehowtocode
 
 Wireframes
 I created the wireframe https://wireframe.cc/tHxCKr in the wireframe.cc website.
-![:image](./Dodge Wrench/Wireframe.png)
+![](Wireframe.png)
 
 Approach Taken
 I decided to tackle the most challenging parts first to determine whether I was capable of 

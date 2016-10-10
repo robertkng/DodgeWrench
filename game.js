@@ -1,18 +1,36 @@
+// When data is entered on the landing page form and the submit button is clicked
+//data will populate onto the game page
+$(document).ready(function() {
+  var firstName = $.urlParameter('Firstname');
+  var lastName = $.urlParameter('Lastname');
+  var email = $.urlParameter('Email');
+  var phone = $.urlParameter('Phone');
+  var cohort = $.urlParameter('cohort') + ' 2016';
+  $('.first').append($.urlParameter('Firstname'));
+  $('.last').append($.urlParameter('Lastname'));
+  $('.phone').append($.urlParameter('Phone'));
+  $('.selectCohort').append($.urlParameter('cohort') + ' 2016');
+});
+
 // Below function pulls the specified strings from the url.
 // Those strings are data entered from the landing page
-$.urlParam = function(name){
+$.urlParameter = function(name){
+//Regular expression costructor is used to locate the following symbols within the
+// page's url. If the return value is
   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-  if (results==null){
-    return null;
-  } else {
+  {
     return results[1] || 0;
   }
 }
-console.log(decodeURIComponent($.urlParam('Firstname')));
-console.log(decodeURIComponent($.urlParam('Lastname')));
-console.log(decodeURIComponent($.urlParam('Email')));
-console.log(decodeURIComponent($.urlParam('Phone')));
-console.log(decodeURIComponent($.urlParam('cohort') + '2016'));
+
+// decodeURIComponent function is used to call the function as the url
+// was encoded when data was entered into the form from the previous landing page
+// then submitted
+console.log(decodeURIComponent($.urlParameter('Firstname')));
+console.log(decodeURIComponent($.urlParameter('Lastname')));
+console.log(decodeURIComponent($.urlParameter('Phone')));
+console.log(decodeURIComponent($.urlParameter('cohort') + ' 2016'));
+
 
 // credit to Jimmy De Los Angeles for helping me understand collision detection
 
@@ -66,7 +84,7 @@ function movingWrenchXY(){
 
 // when collision is detected between the player and wrench, the below message will pop up
 // after the alert message pops up, the webpage reloads
-    // alert("You got hit by a wrench!");
+    alert("You got hit by a wrench!");
     location.reload();
   }
 }
@@ -114,4 +132,5 @@ function mov(e){
     $player.css("top", playerDown)
   }
 }
+
 
