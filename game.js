@@ -51,7 +51,7 @@ function movingWrenchXY(){
 
 // when collision is detected between the player and wrench, the below message will pop up
 // after the alert message pops up, the webpage reloads
-    alert("You got hit by a wrench!");
+    // alert("You got hit by a wrench!");
     location.reload();
   }
 }
