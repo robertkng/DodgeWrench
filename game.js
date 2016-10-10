@@ -1,5 +1,20 @@
-// credit to Jimmy De Los Angeles for helping me understand
-// how to get divs to bounce off the container
+// Below function pulls the specified strings from the url.
+// Those strings are data entered from the landing page
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results==null){
+    return null;
+  } else {
+    return results[1] || 0;
+  }
+}
+console.log(decodeURIComponent($.urlParam('Firstname')));
+console.log(decodeURIComponent($.urlParam('Lastname')));
+console.log(decodeURIComponent($.urlParam('Email')));
+console.log(decodeURIComponent($.urlParam('Phone')));
+console.log(decodeURIComponent($.urlParam('cohort') + '2016'));
+
+// credit to Jimmy De Los Angeles for helping me understand collision detection
 
 // variables assigned to how many pixels the div "wrench" will move under the x and y axis
 var $moveWrenchX = 10;
