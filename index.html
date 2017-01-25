@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dodge Wrench!</title>
+  <h1 class="home">Dodge <br> Wrench!</h1>
+  <link rel="stylesheet" href='style.css'>
+  <script type='text/javascript' src='app.js'></script>
+</head>
+
+<body class="home">
+  <div id="left">
+    <h2>“If you can dodge a wrench, you can dodge a ball.”</h2>
+    <hr>
+      <br>
+      <iframe src="https://www.youtube.com/embed/1ZXHsNqkDI4?autoplay=1">
+      </iframe>
+      <h3>TUTORIAL SECTION</h3>
+      <h4>Game Rules:</h4>
+    <p>
+    A wrench is released and ricochets off the wall at random <br>
+    points within the confines of the gameboard.<br>
+    There is only one rule, maneuver your player around to <br>
+    avoid the wrench.<br>
+    The game ends once the ball makes contact with you.
+    </p>
+      <h5>How to control your player:</h5>
+    <p>
+    Press the left arrow key to move your player to the left.<br>
+    Press the up arrow key to move your player upwards.<br>
+    Press the right arrow key to move your player to the right.<br>
+    Press the down arrow key to move your player downwards.
+    </p>
+  </div>
+    <div id="right"><br>
+      <form action="game.html" method="get" accept-charset="utf-8">
+    <div id="base">
+      <div id="player-info">
+      Player Information
+      </div>
+    </div>
+        <!-- <label>Player Information</label> -->
+        <div id="loginInformation"> <br>
+          <div id="firstname">First Name*<br> <input type="text" name="Firstname" size="60"><br><br></div>
+          <div id="lastname">Last Name*<br> <input type="text" name="Lastname" size="60"><br><br></div>
+          <div id="email">Email*<br> <input type="text" name="Email" size="60"><br><br></div>
+          <div id="phone">Phone*<br> <input type="value" name="Phone" size="60"><br><br></div>
+            <select name="cohort" class="select-cohort">
+              <option value="select">Cohort Start Date</option>
+              <option value="August">August 2016</option>
+              <option value="September">September 2016</option>
+              <option value="October">October 2016</option>
+            </select>
+            <br>
+            <br>
+            <button onclick="location.href = 'game.html';" id="myButton" class="float-left submit-button">Submit and play</button>
+          </div>
+      </div>
+    </form>
+  </body>
+</html>
